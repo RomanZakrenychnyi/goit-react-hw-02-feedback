@@ -1,0 +1,9 @@
+.title {
+    margin-bottom: 20px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
