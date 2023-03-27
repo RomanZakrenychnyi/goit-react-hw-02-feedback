@@ -22,3 +22,6 @@ Statistics.propTypes = {
   total: PropTypes.number.isRequired,
   positiveFeedback: PropTypes.string,
 };
+
+
+// commit for push rep
