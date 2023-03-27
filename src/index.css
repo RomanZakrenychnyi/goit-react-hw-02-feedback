@@ -20,8 +20,10 @@ h3,
 h4,
 ul,
 li,
-button {
+button,
+p {
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 20px;
 };

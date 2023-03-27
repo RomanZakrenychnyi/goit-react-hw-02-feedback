@@ -1,15 +1,14 @@
-import style from './App.module.css';
 import { Component } from 'react';
-import { Feedback } from './Feedback/Feedback';
-import { Statistic } from './Statistic/Statistic';
+import { FeedbackOption } from './FeedbackOption/FeedbackOption';
+import { Section } from './SectionTitle/SectionTitle';
+import { Statistics } from './Statistics/Statistics';
+import { Notification } from './Notification/Notification';
 
 export class App extends Component {
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
-    total: 0,
-    positiveFeedback: 0,
   };
 
   handleUpdate = e => {
@@ -49,11 +48,12 @@ export class App extends Component {
     return (
       <>
         <Section title="Please leave feedback">
-          <Feedback onHandleUpdate={this.handleUpdate} />
+          <FeedbackOption onLeaveFeedback={this.handleUpdate} />
         </Section>
+
         <Section title="Statistics">
           {total ? (
-            <Statistic
+            <Statistics
               good={good}
               neutral={neutral}
               bad={bad}
@@ -61,7 +61,7 @@ export class App extends Component {
               positivePercentag={percentage}
             />
           ) : (
-            <Notification message="There is no feedback" />
+              <Notification message={'There is no feedback'} />
           )}
         </Section>
       </>
